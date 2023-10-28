@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class C02_MethodDeposu {
 static Scanner scanner = new Scanner(System.in);
 
-    public static void cember() {
+    protected static void cember() {
         System.out.println("dilediginiz uzunluklardaki cemberin alan ve cevre uzunlugunu bulmaniza son 1 adim...");
-        System.out.println("simdi lutfen cemberin yaricapini giriniz (π=3)");
+        System.out.println("simdi lutfen cemberin yaricapini giriniz");
         double yaricap = scanner.nextDouble();
         if (yaricap<=0){
             System.out.println("yaricap 0 veya daha kucuk olamaz");
@@ -17,7 +17,7 @@ static Scanner scanner = new Scanner(System.in);
         System.out.println(yaricap+" yaricapli cemberin cevresi: "+(2*yaricap)+"π");
     }
 
-    public static void ucgen() {
+    protected static void ucgen() {
         System.out.println("dilediginiz uzunluklardaki ucgenin alan ve cevre uzunlugunu bulmaniza son birkac adim...");
         System.out.println("ucgeniniz dik ucgen mi? (evet/hayir)");
         String dikMi = scanner.next();
@@ -57,7 +57,7 @@ static Scanner scanner = new Scanner(System.in);
         }
     }
 
-    public static void kare() {
+    protected static void kare() {
         System.out.println("dilediginiz uzunluklardaki karenin alan ve cevre uzunlugunu bulmaniza son X adim...");
         System.out.println("lutfen cevresini ve alanini bulmak istediginiz karenin kenar uzunlugunu giriniz");
         double kenar = scanner.nextDouble();
@@ -69,7 +69,7 @@ static Scanner scanner = new Scanner(System.in);
         System.out.println("karenin cevresi: "+(4*kenar));
     }
 
-    public static void dikdortgen() {
+    protected static void dikdortgen() {
         System.out.println("dilediginiz uzunluklardaki dikdortgenin alan ve cevre uzunlugunu bulmaniza son X adim...");
         System.out.println("lutfen cevresini ve alanini bulmak istediginiz dikdortgenin kisa kenar uzunlugunu giriniz");
         double kisaKenar = scanner.nextDouble();

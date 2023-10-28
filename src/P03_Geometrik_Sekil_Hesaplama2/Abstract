@@ -1,0 +1,11 @@
+
+
+
+1-SORU GEOMETİK ŞEKİL HESAPLAMA
+Asagidaki hiyarasiye gore classlar create ediniz...
+     sekil <--Cember
+     sekil <--Dikdortgen<--Kare
+    1- Turetilen class'a uygun olanlarina yaricap,
+     uzunluk ve genislik veriable'lar ekleyiniz.
+    2- Runner class'ta  Cember Dikdortgen Kare alan
+    ve cevre hesaplamasi yaptirip sonuclari yazdiriniz.

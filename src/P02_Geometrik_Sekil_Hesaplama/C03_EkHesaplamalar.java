@@ -1,7 +1,7 @@
 package P02_Geometrik_Sekil_Hesaplama;
 
 public class C03_EkHesaplamalar {
-    public static double hipotenusHesaplama(double dikkenar1,double dikkenar2) {
+    protected static double hipotenusHesaplama(double dikkenar1,double dikkenar2) {
 
        double kenar1karesi = dikkenar1*dikkenar1;
         double kenar2karesi = dikkenar2*dikkenar2;
