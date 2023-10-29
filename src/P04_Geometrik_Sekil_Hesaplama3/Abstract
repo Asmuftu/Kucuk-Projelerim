@@ -1,0 +1,85 @@
+
+
+
+
+
+1-SORU GEOMETİK ŞEKİL HESAPLAMA
+Asagidaki hiyarasiye gore classlar create ediniz...
+     sekil <--Cember
+     sekil <--Dikdortgen<--Kare
+    1- Turetilen class'a uygun olanlarina yaricap,
+     uzunluk ve genislik veriable'lar ekleyiniz.
+    2- Runner class'ta  Cember Dikdortgen Kare alan
+    ve cevre hesaplamasi yaptirip sonuclari yazdiriniz.
+
+    import java.lang.Math;
+
+    // Ana sınıf: Sekil
+    class Sekil {
+        // Boş constructor
+        public Sekil() {
+        }
+    }
+
+    // Cember sınıfı, Sekil sınıfından türetiliyor
+    class Cember extends Sekil {
+        private double yaricap;
+
+        public Cember(double yaricap) {
+            this.yaricap = yaricap;
+        }
+
+        public double alanHesapla() {
+            return Math.PI * yaricap * yaricap;
+        }
+
+        public double cevreHesapla() {
+            return 2 * Math.PI * yaricap;
+        }
+    }
+
+    // Dikdörtgen sınıfı, Sekil sınıfından türetiliyor
+    class Dikdortgen extends Sekil {
+        private double uzunluk;
+        private double genislik;
+
+        public Dikdortgen(double uzunluk, double genislik) {
+            this.uzunluk = uzunluk;
+            this.genislik = genislik;
+        }
+
+        public double alanHesapla() {
+            return uzunluk * genislik;
+        }
+
+        public double cevreHesapla() {
+            return 2 * (uzunluk + genislik);
+        }
+    }
+
+    // Kare sınıfı, Dikdortgen sınıfından türetiliyor
+    class Kare extends Dikdortgen {
+        public Kare(double kenarUzunlugu) {
+            super(kenarUzunlugu, kenarUzunlugu);
+        }
+    }
+
+    // Runner sınıfı, Cember, Dikdortgen ve Kare nesneleri oluşturup alan ve çevre hesaplamalarını yapar
+    public class Runner {
+        public static void main(String[] args) {
+            // Cember nesnesi
+            Cember cember = new Cember(5);
+            System.out.println("Cember Alanı: " + cember.alanHesapla());
+            System.out.println("Cember Çevresi: " + cember.cevreHesapla());
+
+            // Dikdortgen nesnesi
+            Dikdortgen dikdortgen = new Dikdortgen(4, 6);
+            System.out.println("Dikdortgen Alanı: " + dikdortgen.alanHesapla());
+            System.out.println("Dikdortgen Çevresi: " + dikdortgen.cevreHesapla());
+
+            // Kare nesnesi
+            Kare kare = new Kare(3);
+            System.out.println("Kare Alanı: " + kare.alanHesapla());
+            System.out.println("Kare Çevresi: " + kare.cevreHesapla());
+        }
+    }
