@@ -1,8 +1,6 @@
 
 
 
-
-
 1-SORU GEOMETİK ŞEKİL HESAPLAMA
 Asagidaki hiyarasiye gore classlar create ediniz...
      sekil <--Cember
@@ -11,5 +9,4 @@ Asagidaki hiyarasiye gore classlar create ediniz...
      uzunluk ve genislik veriable'lar ekleyiniz.
     2- Runner class'ta  Cember Dikdortgen Kare alan
     ve cevre hesaplamasi yaptirip sonuclari yazdiriniz.
-
 
