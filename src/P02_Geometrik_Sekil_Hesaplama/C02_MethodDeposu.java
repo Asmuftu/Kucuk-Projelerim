@@ -5,20 +5,23 @@ import java.util.Scanner;
 public class C02_MethodDeposu {
 static Scanner scanner = new Scanner(System.in);
 
-    protected static void cember() {
-        System.out.println("dilediginiz uzunluklardaki cemberin alan ve cevre uzunlugunu bulmaniza son 1 adim...");
+    protected static void cember() throws InterruptedException {
         System.out.println("simdi lutfen cemberin yaricapini giriniz");
         double yaricap = scanner.nextDouble();
         if (yaricap<=0){
             System.out.println("yaricap 0 veya daha kucuk olamaz");
             cember();
         }
-        System.out.println(yaricap+" yaricapli cemberin alani: "+(yaricap*yaricap)+"π");
-        System.out.println(yaricap+" yaricapli cemberin cevresi: "+(2*yaricap)+"π");
+        System.out.println("VE"); Thread.sleep(600);
+        System.out.println("ISTE"); Thread.sleep(600);
+        System.out.println("SONUCLAR"); Thread.sleep(600);
+        C03_EkHesaplamalar.ustHiza();
+        System.out.print("                      "+ (yaricap*yaricap)+"π");
+        System.out.println("                      "+(2*yaricap)+"π");
+        C03_EkHesaplamalar.altHiza();
     }
 
     protected static void ucgen() {
-        System.out.println("dilediginiz uzunluklardaki ucgenin alan ve cevre uzunlugunu bulmaniza son birkac adim...");
         System.out.println("ucgeniniz dik ucgen mi? (evet/hayir)");
         String dikMi = scanner.next();
         if (dikMi.equalsIgnoreCase("evet")){
@@ -57,20 +60,23 @@ static Scanner scanner = new Scanner(System.in);
         }
     }
 
-    protected static void kare() {
-        System.out.println("dilediginiz uzunluklardaki karenin alan ve cevre uzunlugunu bulmaniza son X adim...");
+    protected static void kare() throws InterruptedException {
         System.out.println("lutfen cevresini ve alanini bulmak istediginiz karenin kenar uzunlugunu giriniz");
         double kenar = scanner.nextDouble();
         if (kenar<=0){
             System.out.println("kenar 0 veya daha kucuk olamaz");
             kare();
         }
-        System.out.println("karenin alani: "+ (kenar*kenar));
-        System.out.println("karenin cevresi: "+(4*kenar));
+        System.out.println("VE"); Thread.sleep(800);
+        System.out.println("ISTE"); Thread.sleep(800);
+        System.out.println("SONUCLAR"); Thread.sleep(800);
+        C03_EkHesaplamalar.ustHiza();
+        System.out.print("                      "+ (kenar*kenar));
+        System.out.println("                       "+(4*kenar));
+        C03_EkHesaplamalar.altHiza();
     }
 
-    protected static void dikdortgen() {
-        System.out.println("dilediginiz uzunluklardaki dikdortgenin alan ve cevre uzunlugunu bulmaniza son X adim...");
+    protected static void dikdortgen() throws InterruptedException {
         System.out.println("lutfen cevresini ve alanini bulmak istediginiz dikdortgenin kisa kenar uzunlugunu giriniz");
         double kisaKenar = scanner.nextDouble();
         System.out.println("simdi de uzun kenar uzunlugunu giriniz");
@@ -79,7 +85,12 @@ static Scanner scanner = new Scanner(System.in);
             System.out.println("kenarlar 0 veya daha kucuk olamaz!!");
             dikdortgen();
         }
-        System.out.println("karenin alani: "+ (kisaKenar*uzunKenar));
-        System.out.println("karenin cevresi: "+(2*(kisaKenar+uzunKenar)));
+        System.out.println("VE"); Thread.sleep(800);
+        System.out.println("ISTE"); Thread.sleep(800);
+        System.out.println("SONUCLAR"); Thread.sleep(800);
+        C03_EkHesaplamalar.ustHiza();
+        System.out.print("                      "+ (kisaKenar*uzunKenar));
+        System.out.println("                       "+(2*(kisaKenar+uzunKenar)));
+        C03_EkHesaplamalar.altHiza();
     }
 }

@@ -10,4 +10,12 @@ public class C03_EkHesaplamalar {
 
         return hipotenus;
     }
+
+    public static void ustHiza() {
+        System.out.println("༻✦༺ 　༻✧༺　༻✦༺ ALAN ༻✦༺ 　༻✧༺　༻✦༺ CEVRE ༻✦༺ 　༻✧༺　༻✦༺");
+    }
+
+    public static void altHiza() {
+        System.out.println("                  ▂▃▅▆▇ ▇▆▅▃▂                ▂▃▅▆▇ ▇▆▅▃▂ ");
+    }
 }

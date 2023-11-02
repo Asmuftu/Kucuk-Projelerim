@@ -1,6 +1,6 @@
 package P05_Geometrik_Sekil_Hesaplama4;
 
-public class Kare implements GeometrikSekil{
+public class Kare implements Sekil {
 
     private double kenarUzunlugu;
 

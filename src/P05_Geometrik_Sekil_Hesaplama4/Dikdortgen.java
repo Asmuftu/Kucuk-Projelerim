@@ -1,6 +1,6 @@
 package P05_Geometrik_Sekil_Hesaplama4;
 
-public class Dikdortgen implements GeometrikSekil{
+public class Dikdortgen implements Sekil {
 
     private double uzunluk;
     private double genislik;

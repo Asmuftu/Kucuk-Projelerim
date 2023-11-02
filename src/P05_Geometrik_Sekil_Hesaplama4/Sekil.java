@@ -1,6 +1,6 @@
 package P05_Geometrik_Sekil_Hesaplama4;
 
-public interface GeometrikSekil {
+public interface Sekil {
 
     double alanHesapla();
 

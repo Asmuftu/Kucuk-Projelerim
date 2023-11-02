@@ -3,11 +3,11 @@ package P02_Geometrik_Sekil_Hesaplama;
 import java.util.Scanner;
 
 public class C01_MainMenu {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         menu();
     }
 
-    private static void menu() {
+    private static void menu() throws InterruptedException {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("1.) CEMBER");

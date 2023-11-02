@@ -1,6 +1,6 @@
 package P05_Geometrik_Sekil_Hesaplama4;
 
-public class Cember implements GeometrikSekil{
+public class Cember implements Sekil {
 
     private double yaricap;
 
