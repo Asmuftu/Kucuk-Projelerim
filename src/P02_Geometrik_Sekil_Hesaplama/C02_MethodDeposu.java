@@ -19,9 +19,24 @@ static Scanner scanner = new Scanner(System.in);
         System.out.print("                      "+ (yaricap*yaricap)+"π");
         System.out.println("                      "+(2*yaricap)+"π");
         C03_EkHesaplamalar.altHiza();
+
+        Scanner anaMenuCikis = new Scanner(System.in);
+
+        try {
+            System.out.println("Ana menuye donmek icin 1'i \n Cikis yapmak icin herhangi bir tusu tuslayiniz");
+            int secim = anaMenuCikis.nextInt();
+            if (secim==1){
+                C01_MainMenu.menu();
+            } else {
+                System.exit(0);
+            }
+        }catch (Exception e){
+            System.out.println("Yanlis tuslama yaptiniz program sifirlaniyor");
+            C01_MainMenu.menu();
+        }
     }
 
-    protected static void ucgen() {
+    protected static void ucgen() throws InterruptedException {
         System.out.println("ucgeniniz dik ucgen mi? (evet/hayir)");
         String dikMi = scanner.next();
         if (dikMi.equalsIgnoreCase("evet")){
@@ -58,6 +73,21 @@ static Scanner scanner = new Scanner(System.in);
             System.out.println("lutfen evet ya da hayir yaziniz!");
             ucgen();
         }
+
+        Scanner anaMenuCikis = new Scanner(System.in);
+
+        try {
+            System.out.println("Ana menuye donmek icin 1'i \n Cikis yapmak icin herhangi bir tusu tuslayiniz");
+            int secim = anaMenuCikis.nextInt();
+            if (secim==1){
+                C01_MainMenu.menu();
+            } else {
+                System.exit(0);
+            }
+        }catch (Exception e){
+            System.out.println("Yanlis tuslama yaptiniz program sifirlaniyor");
+            C01_MainMenu.menu();
+        }
     }
 
     protected static void kare() throws InterruptedException {
@@ -74,6 +104,21 @@ static Scanner scanner = new Scanner(System.in);
         System.out.print("                      "+ (kenar*kenar));
         System.out.println("                       "+(4*kenar));
         C03_EkHesaplamalar.altHiza();
+
+        Scanner anaMenuCikis = new Scanner(System.in);
+
+        try {
+            System.out.println("Ana menuye donmek icin 1'i \n Cikis yapmak icin herhangi bir tusu tuslayiniz");
+            int secim = anaMenuCikis.nextInt();
+            if (secim==1){
+                C01_MainMenu.menu();
+            } else {
+                System.exit(0);
+            }
+        }catch (Exception e){
+            System.out.println("Yanlis tuslama yaptiniz program sifirlaniyor");
+            C01_MainMenu.menu();
+        }
     }
 
     protected static void dikdortgen() throws InterruptedException {
@@ -92,5 +137,20 @@ static Scanner scanner = new Scanner(System.in);
         System.out.print("                      "+ (kisaKenar*uzunKenar));
         System.out.println("                       "+(2*(kisaKenar+uzunKenar)));
         C03_EkHesaplamalar.altHiza();
+
+        Scanner anaMenuCikis = new Scanner(System.in);
+
+        try {
+            System.out.println("Ana menuye donmek icin 1'i \n Cikis yapmak icin herhangi bir tusu tuslayiniz");
+            int secim = anaMenuCikis.nextInt();
+            if (secim==1){
+                C01_MainMenu.menu();
+            } else {
+                System.exit(0);
+            }
+        }catch (Exception e){
+            System.out.println("Yanlis tuslama yaptiniz program sifirlaniyor");
+            C01_MainMenu.menu();
+        }
     }
 }

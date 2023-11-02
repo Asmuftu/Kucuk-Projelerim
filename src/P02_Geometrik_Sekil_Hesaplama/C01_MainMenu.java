@@ -7,7 +7,7 @@ public class C01_MainMenu {
         menu();
     }
 
-    private static void menu() throws InterruptedException {
+    protected static void menu() throws InterruptedException {
         Scanner scan = new Scanner(System.in);
 
         System.out.println("1.) CEMBER");

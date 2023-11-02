@@ -1,12 +1,21 @@
 package P04_Geometrik_Sekil_Hesaplama3;
 
+import java.text.DecimalFormat;
+
 public class C00_Runner {
 
     public static void main(String[] args) {
+
+
         // Cember nesnesi
         C02_Cember cember = new C02_Cember(5);
-        System.out.println("Cember Alanı: " + cember.alanHesapla());
-        System.out.println("Cember Çevresi: " + cember.cevreHesapla());
+        double Alan = cember.alanHesapla();
+        double cevre = cember.cevreHesapla();
+        DecimalFormat df =new DecimalFormat("#.##");
+        String yuvarlanmisAlan = df.format(Alan);
+        String yuvarlanmisCevre = df.format(cevre);
+        System.out.println("Cember Alanı: " + yuvarlanmisAlan);
+        System.out.println("Cember Çevresi: " + yuvarlanmisCevre);
 
         // Dikdortgen nesnesi
         C03_Dikdortgen dikdortgen = new C03_Dikdortgen(4, 6);
