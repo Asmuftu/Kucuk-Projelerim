@@ -11,7 +11,7 @@ public class C01_ogr_yonetim_paneli {
     }
 
     static Scanner scan = new Scanner(System.in);
-    private static void menu() throws InterruptedException {
+    protected static void menu() throws InterruptedException {
         System.out.println("    ====================================" +
                 "\n     ÖĞRENCİ VE ÖĞRETMEN YÖNETİM PANELİ" +
                 "\n    ====================================" +

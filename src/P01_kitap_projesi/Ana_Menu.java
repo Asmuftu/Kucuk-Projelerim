@@ -12,7 +12,7 @@ public class Ana_Menu {
         menu();
     }
 
-    public static void menu() {
+    protected static void menu() {
         System.out.println("~~~~~~~~~~~~FYOSA Kitap magazasina hosgeldiniz~~~~~~~~~~~~");
         System.out.println("     * * lutfen yapmak istediginiz islemi seciniz * *");
         System.out.println("PS: Eger kitap eklemek istiyorsaniz 1'i tuslayiniz");

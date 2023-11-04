@@ -4,11 +4,11 @@ import java.util.Map;
 
 public interface Islemler_Interface {
 
-     void ekleme();
+     void ekleme() throws InterruptedException;
 
     void arama();
 
-    void listeleme();
+    void listeleme() throws InterruptedException;
 
     void silme();
 
