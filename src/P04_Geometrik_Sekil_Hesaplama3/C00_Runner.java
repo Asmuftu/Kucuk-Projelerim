@@ -11,7 +11,7 @@ public class C00_Runner {
         C02_Cember cember = new C02_Cember(5);
         double Alan = cember.alanHesapla();
         double cevre = cember.cevreHesapla();
-        DecimalFormat df =new DecimalFormat("#.##");
+        DecimalFormat df =new DecimalFormat("#.####");
         String yuvarlanmisAlan = df.format(Alan);
         String yuvarlanmisCevre = df.format(cevre);
         System.out.println("Cember Alanı: " + yuvarlanmisAlan);
