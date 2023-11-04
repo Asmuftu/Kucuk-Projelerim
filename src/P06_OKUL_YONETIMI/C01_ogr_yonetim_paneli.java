@@ -62,9 +62,9 @@ public class C01_ogr_yonetim_paneli {
         System.out.println("============= İŞLEMLER =============" +
                 "\n          1-EKLEME" +
                 "\n          2-ARAMA" +
-                "\n          3-LİSTELEME" +
+                "\n          3-LISTELEME" +
                 "\n          4-SİLME" +
-                "\n          Q-ÇIKIŞ");
-        System.out.print("Seciminiz: ");
+                "\n          Q-ANA MENU");
+        System.out.print("Seçiminiz: ");
     }
 }

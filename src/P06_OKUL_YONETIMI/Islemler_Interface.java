@@ -6,11 +6,11 @@ public interface Islemler_Interface {
 
      void ekleme() throws InterruptedException;
 
-    void arama();
+    void arama() throws InterruptedException;
 
     void listeleme() throws InterruptedException;
 
-    void silme();
+    void silme() throws InterruptedException;
 
 
 

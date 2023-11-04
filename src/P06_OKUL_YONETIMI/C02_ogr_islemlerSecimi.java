@@ -29,7 +29,7 @@ public class C02_ogr_islemlerSecimi {
                     obj.silme();
                     break;
                 case 'q','Q':
-                    System.exit(0);
+                    C01_ogr_yonetim_paneli.menu();
                     break;
                 default:
                     throw new InputMismatchException("durum analiz ediliyor...");
