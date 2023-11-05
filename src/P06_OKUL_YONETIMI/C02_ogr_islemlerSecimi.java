@@ -44,8 +44,9 @@ public class C02_ogr_islemlerSecimi {
         }
     }
 
-    public static void ogrenciIslemleri() {
+    public static void ogrenciIslemleri() throws InterruptedException {
         C01_ogr_yonetim_paneli.islemler();
+        C04_OGRENCI_islemSecimi obj = new C04_OGRENCI_islemSecimi();
 
         char secim = 0;
         try {
@@ -54,25 +55,27 @@ public class C02_ogr_islemlerSecimi {
 
             switch (secim) {
                 case '1':
-
+                    obj.ekleme();
                     break;
                 case '2':
-
+                    obj.arama();
                     break;
                 case '3':
-
+                    obj.listeleme();
                     break;
                 case '4':
-
+                    obj.silme();
                     break;
                 case 'q','Q':
-
+                    C01_ogr_yonetim_paneli.menu();
                     break;
             }
         }catch (Exception e){
             System.out.println("yanlis giris yaptiniz, lutfen asagida verilen degerlerden birini tuslayiniz" +
-                    "\n hicbir tusa basmayiniz sizi 3 saniye icerisinde tekrar yonlendiriyorum" +
+                    "\n hicbir tusa basmayiniz sizi 2 saniye icerisinde tekrar yonlendiriyorum" +
                     "\n   \"1,2,3,4,Q\" ");
+            Thread.sleep(2000);
+            ogrenciIslemleri();
 
         }
     }

@@ -8,7 +8,7 @@ import java.util.*;
 public class C03_OGRETMEN_islemSecimi implements Islemler_Interface{
 
     protected static Map<Integer,Map<String,Object>> ogretmenListesi = new TreeMap<>();
-    protected static Map<String,Object> ogretmenBilgileri = new HashMap<>();
+    protected static Map<String,Object> ogretmenBilgileri = new TreeMap<>();
 
     static Scanner scanner = new Scanner(System.in);
     static Scanner scanner2 = new Scanner(System.in);
@@ -99,7 +99,7 @@ public class C03_OGRETMEN_islemSecimi implements Islemler_Interface{
     @Override
     public void arama() throws InterruptedException {
 
-        C05_YedekIslemMethodlari.fakeList();
+        C05_YedekIslemMethodlari.fakeListogretmen();
         System.out.println("Lutfen aramak istediginiz Ogretmenin Sicil numarasini yaziniz");
         Set<Map.Entry<Integer,Map<String,Object>>> entrySet = ogretmenListesi.entrySet();
         for (Map.Entry<Integer,Map<String,Object>> sicilNoVeBilgiler : entrySet){
@@ -108,7 +108,7 @@ public class C03_OGRETMEN_islemSecimi implements Islemler_Interface{
             System.out.println(ogretmenBilgileri.get("Soyisim ")+" , ");
         }
         Integer arananKisi = scanner2.nextInt();
-        System.out.println("Isim: "+ogretmenListesi.get(arananKisi).get("Isim"));
+        System.out.println("Isim: "+ogretmenListesi.get(arananKisi).get("Isim "));
         System.out.println("Soyisim: "+ogretmenListesi.get(arananKisi).get("Soyisim "));
         System.out.println("Kimlik No: "+ogretmenListesi.get(arananKisi).get("Kimlik No "));
         System.out.println("Yas: "+ogretmenListesi.get(arananKisi).get("Yas "));
@@ -121,7 +121,7 @@ public class C03_OGRETMEN_islemSecimi implements Islemler_Interface{
     @Override
     public void listeleme() throws InterruptedException {
         System.out.println("Kayitli ogretmen listesi: ");
-        C05_YedekIslemMethodlari.fakeList();
+        C05_YedekIslemMethodlari.fakeListogretmen();
         Set<Map.Entry<Integer,Map<String,Object>>> entrySet = ogretmenListesi.entrySet();
 
         for (Map.Entry<Integer,Map<String,Object>> sicilNoVeBilgiler : entrySet) {
@@ -146,7 +146,7 @@ public class C03_OGRETMEN_islemSecimi implements Islemler_Interface{
 
     @Override
     public void silme() throws InterruptedException {
-        C05_YedekIslemMethodlari.fakeList();
+        C05_YedekIslemMethodlari.fakeListogretmen();
         System.out.println("Lutfen silmek istediginiz Ogretmenin Sicil numarasini yaziniz");
         Set<Map.Entry<Integer,Map<String,Object>>> entrySet = ogretmenListesi.entrySet();
         for (Map.Entry<Integer,Map<String,Object>> sicilNoVeBilgiler : entrySet){

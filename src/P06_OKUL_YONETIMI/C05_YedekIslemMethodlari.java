@@ -15,7 +15,7 @@ public class C05_YedekIslemMethodlari {
         return true; // Tüm karakterler harf ise, true döndürün.
     }
 
-    public static void fakeList() {
+    public static void fakeListogretmen() {
         Map<String,Object> fakeListe1 = new TreeMap<>();
         fakeListe1.put("Isim "," Abdullah"); // isim
         fakeListe1.put("Soyisim "," Bozca"); // soyisim
@@ -52,5 +52,8 @@ public class C05_YedekIslemMethodlari {
         fakeListe4.put("Tarih "," 2023-11-04"); // tarih
         C03_OGRETMEN_islemSecimi.ogretmenListesi.put(382746425,fakeListe4);
 
+    }
+
+    public static void fakeListOgrenci() {
     }
 }
