@@ -23,7 +23,7 @@ public class Ogretmen implements Liste_islemler {
             String isim = scanner.nextLine();
             if (isim.isEmpty()) {
                 System.out.println("İsim boş bırakılamaz. Lütfen bir isim girin.");
-            } else if (YedekIslemler.sadeceHarfKarakterleri(isim)) {
+            } else if (isim.matches("^[\\w]+(\\s[\\w]+){0,2}$")) {
                 ogretmenBilgileri.put("Isim ", " " + isim.substring(0, 1).toUpperCase() + isim.substring(1));
                 break;
             } else {
@@ -53,7 +53,6 @@ public class Ogretmen implements Liste_islemler {
             String kimlikNo = scanner.next();
 
             if (kimlikNo.length() == 11 && kimlikNo.matches("[0-9]+")) {
-                long number = Long.parseLong(kimlikNo);
                 ogretmenBilgileri.put("Kimlik No ", " " + kimlikNo);
                 break; // Doğru değer girildi, döngüyü sonlandır.
             } else {
@@ -62,17 +61,18 @@ public class Ogretmen implements Liste_islemler {
         }
 
          // YAS ALINIYOR
-        double yas = 0.0;
         while (true) {
-            System.out.println("Lutfen yasinizi giriniz");
-            String yasStr = scanner.next();
             try {
-                yas = Double.parseDouble(yasStr);
-                int tamYas = (int) yas;
-                ogretmenBilgileri.put("Yas ", " " + tamYas);
-                break;
-            } catch (NumberFormatException e) {
-                System.out.println("Geçerli bir yaş girilmedi. Lütfen tekrar deneyin.");
+                System.out.println("Lütfen yaşınızı girin");
+                int yas = scanner.nextInt();
+                if (yas > 18 && yas<110) {
+                    ogretmenBilgileri.put("Yas ", " " + yas);
+                    break;
+                } else {
+                    System.out.println("Yanlis deger girdiniz, girdiginiz yas yasal degil");
+                }
+            } catch (java.util.InputMismatchException e) {
+                System.out.println("Hatalı giriş! Lütfen sadece sayısal bir değer girin.");
             }
         }
 
@@ -86,7 +86,7 @@ public class Ogretmen implements Liste_islemler {
         LocalDate girisTarihi = LocalDate.now();
         ogretmenBilgileri.put("Ekleme Tarihi "," "+girisTarihi);
 
-        System.out.println("isyeriniz tarafindan size verilen sicil numaraniz "+sicilNo +"'dir lutfen bu numarayi kaybetmeyiniz");
+        System.out.println("isyeriniz tarafindan size verilen sicil numaraniz "+sicilNo +"'dir lutfen bu numarayi KAYBETMEYIN");
         ogretmenListesi.put(sicilNo,ogretmenBilgileri);
         System.out.println("ISLEMINIZ BASARIYLA KAYDEDILMISTIR");
         sicilNo += 3;
