@@ -3,7 +3,7 @@ package P06_OKUL_YONETIMI;
 import java.time.LocalDate;
 import java.util.*;
 
-public class C04_OGRENCI_islemSecimi implements Islemler_Interface{
+public class Ogrenci implements Liste_islemler {
 
     protected static Map<Integer,Map<String,Object>> ogrenciListesi = new TreeMap<>();
     protected static Map<String,Object> ogrenciBilgileri = new TreeMap<>();
@@ -22,7 +22,7 @@ public class C04_OGRENCI_islemSecimi implements Islemler_Interface{
             String isim = scanner.nextLine();
             if (isim.isEmpty()) {
                 System.out.println("İsim boş bırakılamaz. Lütfen bir isim girin.");
-            } else if (C05_YedekIslemMethodlari.sadeceHarfKarakterleri(isim)) {
+            } else if (YedekIslemler.sadeceHarfKarakterleri(isim)) {
                 ogrenciBilgileri.put("Isim ", " " + isim.substring(0, 1).toUpperCase() + isim.substring(1));
                 gecerliIsimGirildi = true;
             } else {
@@ -37,7 +37,7 @@ public class C04_OGRENCI_islemSecimi implements Islemler_Interface{
             String soyisim = scanner.nextLine();
             if (soyisim.isEmpty()) {
                 System.out.println("İsim boş bırakılamaz. Lütfen bir isim girin.");
-            } else if (C05_YedekIslemMethodlari.sadeceHarfKarakterleri(soyisim)) {
+            } else if (YedekIslemler.sadeceHarfKarakterleri(soyisim)) {
                 ogrenciBilgileri.put("Soyisim ", " " + soyisim.toUpperCase());
                 gecerliSoyisimGirildi = true;
             } else {
@@ -90,12 +90,12 @@ public class C04_OGRENCI_islemSecimi implements Islemler_Interface{
         System.out.println("ISLEMINIZ BASARIYLA KAYDEDILMISTIR");
         numara += 4;
 
-        C02_ogr_islemlerSecimi.ogrenciIslemleri();
+        System.out.println("Sizi Menuye aktariyorum...");
     }
 
     @Override
     public void arama() {
-        C05_YedekIslemMethodlari.fakeListOgrenci();
+        YedekIslemler.fakeListOgrenci();
         System.out.println("Lutfen aramak istediginiz Ogrencinin  numarasini yaziniz");
         Set<Map.Entry<Integer,Map<String,Object>>> entrySet = ogrenciListesi.entrySet();
         for (Map.Entry<Integer,Map<String,Object>> NoVeBilgiler : entrySet){
@@ -111,13 +111,14 @@ public class C04_OGRENCI_islemSecimi implements Islemler_Interface{
         System.out.println("Sinif No: "+ogrenciListesi.get(arananKisi).get("Sinif No "));
         System.out.println("Ekleme Tarihi: "+ogrenciListesi.get(arananKisi).get("Ekleme Tarihi "));
 
+        System.out.println("Sizi Menuye aktariyorum...");
     }
 
     @Override
     public void listeleme() throws InterruptedException {
 
         System.out.println("Kayitli ogretmen listesi: ");
-        C05_YedekIslemMethodlari.fakeListOgrenci();
+        YedekIslemler.fakeListOgrenci();
         Set<Map.Entry<Integer,Map<String,Object>>> entrySet = ogrenciListesi.entrySet();
 
         for (Map.Entry<Integer,Map<String,Object>> NoVeBilgiler : entrySet) {
@@ -135,13 +136,13 @@ public class C04_OGRENCI_islemSecimi implements Islemler_Interface{
             System.out.println(" ");
             System.out.println("---------------------");
         }
-        C02_ogr_islemlerSecimi.ogrenciIslemleri();
+        System.out.println("Sizi Menuye aktariyorum...");
     }
 
     @Override
     public void silme() throws InterruptedException {
 
-        C05_YedekIslemMethodlari.fakeListOgrenci();
+        YedekIslemler.fakeListOgrenci();
         System.out.println("Lutfen silmek istediginiz Ogretmenin Sicil numarasini yaziniz");
         Set<Map.Entry<Integer,Map<String,Object>>> entrySet = ogrenciListesi.entrySet();
         for (Map.Entry<Integer,Map<String,Object>> NoVeBilgiler : entrySet){
@@ -153,7 +154,7 @@ public class C04_OGRENCI_islemSecimi implements Islemler_Interface{
         ogrenciListesi.remove(kisiyiSil);
         System.out.println("KISI BASARIYLA SILINMISTIR");
 
-        C02_ogr_islemlerSecimi.ogrenciIslemleri();
+        System.out.println("Sizi Menuye aktariyorum...");
     }
 }
 

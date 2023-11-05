@@ -1,8 +1,6 @@
 package P06_OKUL_YONETIMI;
 
-import java.util.Map;
-
-public interface Islemler_Interface {
+public interface Liste_islemler {
 
      void ekleme() throws InterruptedException;
 

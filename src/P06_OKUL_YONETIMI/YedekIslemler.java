@@ -3,7 +3,7 @@ package P06_OKUL_YONETIMI;
 import java.util.Map;
 import java.util.TreeMap;
 
-public class C05_YedekIslemMethodlari {
+public class YedekIslemler {
 
     public static boolean sadeceHarfKarakterleri(String isim) {
         for (int i = 0; i < isim.length(); i++) {
@@ -23,7 +23,7 @@ public class C05_YedekIslemMethodlari {
         fakeListe1.put("Yas "," 18"); // yas
         fakeListe1.put("Bolum "," Sosyal"); // bolum
         fakeListe1.put("Tarih "," 2023-11-04"); // tarih
-        C03_OGRETMEN_islemSecimi.ogretmenListesi.put(382746416,fakeListe1);
+        Ogretmen.ogretmenListesi.put(382746416,fakeListe1);
 
         Map<String,Object> fakeListe2 = new TreeMap<>();
         fakeListe2.put("Isim "," Ahmet"); // isim
@@ -32,7 +32,7 @@ public class C05_YedekIslemMethodlari {
         fakeListe2.put("Yas "," 21"); // yas
         fakeListe2.put("Bolum "," Matematik"); // bolum
         fakeListe2.put("Tarih "," 2023-11-04"); // tarih
-        C03_OGRETMEN_islemSecimi.ogretmenListesi.put(382746419,fakeListe2);
+        Ogretmen.ogretmenListesi.put(382746419,fakeListe2);
 
         Map<String,Object> fakeListe3 = new TreeMap<>();
         fakeListe3.put("Isim "," Recep"); // isim
@@ -41,7 +41,7 @@ public class C05_YedekIslemMethodlari {
         fakeListe3.put("Yas "," 19"); // yas
         fakeListe3.put("Bolum "," Edebiyat"); // bolum
         fakeListe3.put("Tarih "," 2023-11-04"); // tarih
-        C03_OGRETMEN_islemSecimi.ogretmenListesi.put(382746422,fakeListe3);
+        Ogretmen.ogretmenListesi.put(382746422,fakeListe3);
 
         Map<String,Object> fakeListe4 = new TreeMap<>();
         fakeListe4.put("Isim "," Murat"); // isim
@@ -50,7 +50,7 @@ public class C05_YedekIslemMethodlari {
         fakeListe4.put("Yas "," 20"); // yas
         fakeListe4.put("Bolum "," Fizik"); // bolum
         fakeListe4.put("Tarih "," 2023-11-04"); // tarih
-        C03_OGRETMEN_islemSecimi.ogretmenListesi.put(382746425,fakeListe4);
+        Ogretmen.ogretmenListesi.put(382746425,fakeListe4);
 
     }
 
