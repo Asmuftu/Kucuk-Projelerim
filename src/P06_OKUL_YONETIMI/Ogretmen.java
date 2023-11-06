@@ -24,7 +24,13 @@ public class Ogretmen implements Liste_islemler {
             if (isim.isEmpty()) {
                 System.out.println("İsim boş bırakılamaz. Lütfen bir isim girin.");
             } else if (isim.matches("^[\\w]+(\\s[\\w]+){0,2}$")) {
-                ogretmenBilgileri.put("Isim ", " " + isim.substring(0, 1).toUpperCase() + isim.substring(1));
+                String[] arr = isim.split(" ");
+                isim = "";
+                for (String each: arr) {
+                    isim += each.toUpperCase().charAt(0)+each.toLowerCase().substring(1)+" ";
+                }
+                isim = isim.substring(0,isim.length()-1);
+                ogretmenBilgileri.put("Isim ", " " + isim);
                 break;
             } else {
                 System.out.println("Geçersiz isim girdiniz, lütfen tekrar deneyiniz");

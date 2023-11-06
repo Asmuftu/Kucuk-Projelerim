@@ -75,16 +75,16 @@ public class YedekIslemler {
 
         Map<String,Object> fakeListe3 = new TreeMap<>();
         fakeListe3.put("Isim "," Zehra"); // isim
-        fakeListe3.put("Soyisim "," bilinmiyor"); // soyisim
+        fakeListe3.put("Soyisim "," Demir"); // soyisim
         fakeListe3.put("Kimlik No "," 10829530451"); // kimlik
-        fakeListe3.put("Yas "," 30"); // yas
+        fakeListe3.put("Yas "," 45"); // yas
         fakeListe3.put("Sinif "," T127-2"); // sinif
         fakeListe3.put("Ekleme Tarihi "," 2023-11-04"); // tarih
         Ogrenci.ogrenciListesi.put(8467,fakeListe3);
 
         Map<String,Object> fakeListe4 = new TreeMap<>();
         fakeListe4.put("Isim "," Zeliha"); // isim
-        fakeListe4.put("Soyisim "," bilinmiyor"); // soyisim
+        fakeListe4.put("Soyisim "," Selçuk"); // soyisim
         fakeListe4.put("Kimlik No "," 10829530451"); // kimlik
         fakeListe4.put("Yas "," 30"); // yas
         fakeListe4.put("Sinif "," T127-2"); // sinif

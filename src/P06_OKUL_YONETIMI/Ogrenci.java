@@ -23,7 +23,13 @@ public class Ogrenci implements Liste_islemler {
             if (isim.isEmpty()) {
                 System.out.println("İsim boş bırakılamaz. Lütfen bir isim girin.");
             } else if (isim.matches("^[\\w]+(\\s[\\w]+){0,2}$")) {
-                ogrenciBilgileri.put("Isim ", " " + isim.substring(0, 1).toUpperCase() + isim.substring(1));
+                String[] arr = isim.split(" ");
+                isim = "";
+                for (String each: arr) {
+                    isim += each.toUpperCase().charAt(0)+each.toLowerCase().substring(1)+" ";
+                }
+                isim = isim.substring(0,isim.length()-1);
+                ogrenciBilgileri.put("Isim ", " " + isim);
                 break;
             } else {
                 System.out.println("Geçersiz isim girdiniz, lütfen tekrar deneyiniz");
@@ -51,7 +57,7 @@ public class Ogrenci implements Liste_islemler {
             System.out.println("Lütfen kimlik numaranızı giriniz (11 haneli)");
             String kimlikNo = scanner.next();
 
-            if (kimlikNo.length() == 11 && kimlikNo.matches("[0-9]+")) {
+            if (kimlikNo.length() == 11 && kimlikNo.matches("[0-9]+") && !kimlikNo.startsWith("0")) { //
                 ogrenciBilgileri.put("Kimlik No ", " " + kimlikNo);
                 break; // Doğru değer girildi, döngüyü sonlandır.
             } else {
@@ -125,9 +131,9 @@ public class Ogrenci implements Liste_islemler {
 
         for (Map.Entry<Integer,Map<String,Object>> NoVeBilgiler : entrySet) {
 
-            Map<String, Object> ogrenciBilgileri = NoVeBilgiler.getValue();
-            Set<Map.Entry<String, Object>> ictekiEntrySet = ogrenciBilgileri.entrySet();
-
+            Map<String, Object> ogrenciBilgileri = NoVeBilgiler.getValue();                         //         dis key         dis value
+            Set<Map.Entry<String, Object>> ictekiEntrySet = ogrenciBilgileri.entrySet();           //    Map < String , Map<String , Object> >
+                                                                                                   //                       ic key , ic value
             System.out.println("Numara: "+ NoVeBilgiler.getKey());
 
             for (Map.Entry<String,Object> bilgiler : ictekiEntrySet) {
