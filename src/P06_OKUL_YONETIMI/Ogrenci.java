@@ -7,7 +7,6 @@ public class Ogrenci implements Liste_islemler {
 
     protected static Map<Integer,Map<String,Object>> ogrenciListesi = new TreeMap<>();
     protected static Map<String,Object> ogrenciBilgileri = new TreeMap<>();
-
     static Scanner scanner = new Scanner(System.in);
     static Scanner scanner2 = new Scanner(System.in);
     static int numara = 8475;
@@ -103,7 +102,7 @@ public class Ogrenci implements Liste_islemler {
 
     @Override
     public void arama() {
-        YedekIslemler.fakeListOgrenci();
+
         System.out.println("Lutfen aramak istediginiz Ogrencinin  numarasini yaziniz");
         Set<Map.Entry<Integer,Map<String,Object>>> entrySet = ogrenciListesi.entrySet();
         for (Map.Entry<Integer,Map<String,Object>> NoVeBilgiler : entrySet){
@@ -126,7 +125,7 @@ public class Ogrenci implements Liste_islemler {
     public void listeleme() throws InterruptedException {
 
         System.out.println("Kayitli ogretmen listesi: ");
-        YedekIslemler.fakeListOgrenci();
+
         Set<Map.Entry<Integer,Map<String,Object>>> entrySet = ogrenciListesi.entrySet();
 
         for (Map.Entry<Integer,Map<String,Object>> NoVeBilgiler : entrySet) {
@@ -150,7 +149,7 @@ public class Ogrenci implements Liste_islemler {
     @Override
     public void silme() throws InterruptedException {
 
-        YedekIslemler.fakeListOgrenci();
+
         System.out.println("Lutfen silmek istediginiz Ogretmenin Sicil numarasini yaziniz");
         Set<Map.Entry<Integer,Map<String,Object>>> entrySet = ogrenciListesi.entrySet();
         for (Map.Entry<Integer,Map<String,Object>> NoVeBilgiler : entrySet){

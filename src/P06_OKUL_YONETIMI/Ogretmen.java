@@ -103,7 +103,6 @@ public class Ogretmen implements Liste_islemler {
     @Override
     public void arama() throws InterruptedException {
 
-        YedekIslemler.fakeListogretmen();
         System.out.println("Lutfen aramak istediginiz Ogretmenin Sicil numarasini yaziniz");
         Set<Map.Entry<Integer,Map<String,Object>>> entrySet = ogretmenListesi.entrySet();
         for (Map.Entry<Integer,Map<String,Object>> sicilNoVeBilgiler : entrySet){
@@ -125,7 +124,7 @@ public class Ogretmen implements Liste_islemler {
     @Override
     public void listeleme() throws InterruptedException {
         System.out.println("Kayitli ogretmen listesi: ");
-        YedekIslemler.fakeListogretmen();
+
         Set<Map.Entry<Integer,Map<String,Object>>> entrySet = ogretmenListesi.entrySet();
 
         for (Map.Entry<Integer,Map<String,Object>> sicilNoVeBilgiler : entrySet) {
@@ -150,7 +149,7 @@ public class Ogretmen implements Liste_islemler {
 
     @Override
     public void silme() throws InterruptedException {
-        YedekIslemler.fakeListogretmen();
+
         System.out.println("Lutfen silmek istediginiz Ogretmenin Sicil numarasini yaziniz");
         Set<Map.Entry<Integer,Map<String,Object>>> entrySet = ogretmenListesi.entrySet();
         for (Map.Entry<Integer,Map<String,Object>> sicilNoVeBilgiler : entrySet){

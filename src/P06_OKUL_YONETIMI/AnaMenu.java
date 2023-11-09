@@ -13,11 +13,11 @@ public class AnaMenu {
     static Ogrenci ogrenci = new Ogrenci();
 
     public static void main(String[] args) throws InterruptedException {
-
+        YedekIslemler.fakeListogretmen();
+        YedekIslemler.fakeListOgrenci();
                           yonetimPaneli();
     }
     protected static void yonetimPaneli() throws InterruptedException {
-
         System.out.println("    ====================================" +
                 "\n     ÖĞRENCİ VE ÖĞRETMEN YÖNETİM PANELİ" +
                 "\n    ====================================" +
