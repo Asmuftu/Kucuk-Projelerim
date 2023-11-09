@@ -111,7 +111,7 @@ public class Ogrenci implements Liste_islemler {
             System.out.println(ogrenciBilgileri.get("Soyisim ")+" , ");
         }
         Integer arananKisi = scanner2.nextInt();
-        System.out.println("Isim: "+ogrenciListesi.get(arananKisi).get("Isim"));
+        System.out.println("Isim: "+ogrenciListesi.get(arananKisi).get("Isim "));
         System.out.println("Soyisim: "+ogrenciListesi.get(arananKisi).get("Soyisim "));
         System.out.println("Kimlik No: "+ogrenciListesi.get(arananKisi).get("Kimlik No "));
         System.out.println("Yas: "+ogrenciListesi.get(arananKisi).get("Yas "));

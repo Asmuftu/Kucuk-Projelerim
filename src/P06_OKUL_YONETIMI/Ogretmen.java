@@ -95,7 +95,7 @@ public class Ogretmen implements Liste_islemler {
         System.out.println("isyeriniz tarafindan size verilen sicil numaraniz "+sicilNo +"'dir lutfen bu numarayi KAYBETMEYIN");
         ogretmenListesi.put(sicilNo,ogretmenBilgileri);
         System.out.println("ISLEMINIZ BASARIYLA KAYDEDILMISTIR");
-        sicilNo += 3;
+        sicilNo += 8;
         System.out.println("Sizi Menuye aktariyorum...");
 
     }

@@ -60,7 +60,7 @@ public class YedekIslemler {
         fakeListe1.put("Soyisim "," Muftu"); // soyisim
         fakeListe1.put("Kimlik No "," 10829530451"); // kimlik
         fakeListe1.put("Yas "," 19"); // yas
-        fakeListe1.put("Sinif "," T127-2"); // sinif
+        fakeListe1.put("Sinif No:"," T127-2"); // sinif
         fakeListe1.put("Ekleme Tarihi "," 2023-11-04"); // tarih
         Ogrenci.ogrenciListesi.put(8459,fakeListe1);
 
@@ -69,7 +69,7 @@ public class YedekIslemler {
         fakeListe2.put("Soyisim "," Sheldon"); // soyisim
         fakeListe2.put("Kimlik No "," 34193613783"); // kimlik
         fakeListe2.put("Yas "," 45"); // yas
-        fakeListe2.put("Sinif "," T127-2"); // sinif
+        fakeListe2.put("Sinif No: "," T127-2"); // sinif
         fakeListe2.put("Ekleme Tarihi "," 2023-11-04"); // tarih
         Ogrenci.ogrenciListesi.put(8463,fakeListe2);
 
@@ -78,7 +78,7 @@ public class YedekIslemler {
         fakeListe3.put("Soyisim "," Demir"); // soyisim
         fakeListe3.put("Kimlik No "," 10829530451"); // kimlik
         fakeListe3.put("Yas "," 45"); // yas
-        fakeListe3.put("Sinif "," T127-2"); // sinif
+        fakeListe3.put("Sinif No: "," T127-2"); // sinif
         fakeListe3.put("Ekleme Tarihi "," 2023-11-04"); // tarih
         Ogrenci.ogrenciListesi.put(8467,fakeListe3);
 
@@ -87,7 +87,7 @@ public class YedekIslemler {
         fakeListe4.put("Soyisim "," Selçuk"); // soyisim
         fakeListe4.put("Kimlik No "," 10829530451"); // kimlik
         fakeListe4.put("Yas "," 30"); // yas
-        fakeListe4.put("Sinif "," T127-2"); // sinif
+        fakeListe4.put("Sinif No: "," T127-2"); // sinif
         fakeListe4.put("Ekleme Tarihi "," 2023-11-04"); // tarih
         Ogrenci.ogrenciListesi.put(8471,fakeListe4);
     }

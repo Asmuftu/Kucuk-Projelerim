@@ -91,8 +91,8 @@ public class AnaMenu {
             case "2Q":
                 yonetimPaneli();
                 break;
-            case "q":
-            case "Q":
+            case "qq":
+            case "QQ":
                 System.out.println("Cikis");
                 System.exit(0);
                 break;
