@@ -48,7 +48,7 @@ public class Ogretmen implements Liste_islemler {
                 ogretmenBilgileri.put("Soyisim ", " " + soyisim.toUpperCase());
                 break;
             } else {
-                System.out.println("Geçersiz isim girdiniz, lütfen tekrar deneyiniz");
+                System.out.println("Geçersiz isim girdiniz, lütfen tekrar deneyiniz!");
             }
         }
 
